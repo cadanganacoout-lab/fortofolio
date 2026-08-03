@@ -20,8 +20,8 @@ const portfolioData = {
   // INFORMASI DASAR SITUS
   // ------------------------------------------------------------------
   site: {
-    title: "Bima Satria Pradana — Portofolio",
-    footerNote: "Dibuat dengan HTML, CSS & JavaScript murni.",
+    title: "GILANG NUR MAULIDA FAID — Portofolio",
+    footerNote: "Dibuat Individu oleh Gilang Nur Maulida Faid | 2026",
   },
 
   // ------------------------------------------------------------------
@@ -42,32 +42,32 @@ const portfolioData = {
   // PROFIL / HERO (bagian paling atas)
   // ------------------------------------------------------------------
   profile: {
-    name: "Bima Satria Pradana",
-    initials: "BS",            // dipakai di avatar bulat, isi 2 huruf
+    name: "GILANG NUR MAULIDA FAID",
+    initials: "GF",            // dipakai di avatar bulat, isi 2 huruf
     role: "Siswa Kelas 11 · Rekayasa Perangkat Lunak",
-    school: "SMK Cendekia Teknologi",
-    location: "Malang, Jawa Timur",
+    school: "SMK PGRI 2 PONOROGO",
+    location: "Ponorogo, Jawa Timur",
     status: "Terbuka untuk PKL / magang",
 
     // Baris kode ini akan "diketik" otomatis seperti animasi terminal.
     // Tambah/kurangi baris sesuka kamu, tetap dalam bentuk teks biasa.
     typingLines: [
-      "const bima = {",
+      "const gilang = {",
       "  status: 'siswa RPL kelas 11',",
-      "  sedangBelajar: ['JavaScript', 'PHP', 'MySQL'],",
+      "  sedangBelajar: ['CyberSecurity', 'Penetration Testing', 'RedHat'],",
       "  motto: 'consistency > intensity',",
       "  siapMagang: true,",
       "};",
     ],
 
-    tags: ["Belajar tiap hari", "Suka UI/UX", "Anak organisasi"],
+    tags: ["Belajar tiap hari", "Suka CyberSecurity", "Frontend Enthusiast", "Mau magang / PKL"],
 
     // Isi 'url' dengan link asli akun kamu. Kosongkan "#" jika belum ada.
     socials: [
-      { platform: "github",   label: "GitHub",   url: "#" },
-      { platform: "linkedin", label: "LinkedIn", url: "#" },
-      { platform: "instagram",label: "Instagram",url: "#" },
-      { platform: "email",    label: "Email",    url: "#" },
+      { platform: "github",   label: "GitHub",   url: "https://github.com/cadanganacoout-lab" },
+      { platform: "linkedin", label: "LinkedIn", url: "https://www.linkedin.com/in/gilang-nur-naulida-faid-080233400/" },
+      { platform: "instagram",label: "Instagram",url: "https://www.instagram.com/gilanzq_/" },
+      { platform: "email",    label: "Email",    url: "cadanganacoout@gmail.com" },
     ],
   },
 
@@ -106,22 +106,22 @@ const portfolioData = {
   // ------------------------------------------------------------------
   education: [
     {
-      period: "2017 — 2019",
+      period: "2016 — 2022",
       level: "Sekolah Dasar",
-      name: "SDN Sukamaju 1",
+      name: "MI MA'ARIF MAYAK",
       note: "Menyelesaikan pendidikan dasar dengan aktif di ekstrakurikuler komputer.",
     },
     {
-      period: "2019 — 2022",
+      period: "2022 — 2025",
       level: "Sekolah Menengah Pertama",
-      name: "SMPN 4 Sukamaju",
-      note: "Mulai belajar dasar desain grafis dan mengikuti klub robotik sekolah.",
+      name: "MTSN DARUL HUDA MAYAK",
+      note: "Sekolah menengah pertama dengan fokus pada bidang ahklaq dan sopan santun.",
     },
     {
-      period: "2022 — Sekarang",
+      period: "2025 — Sekarang",
       level: "Sekolah Menengah Kejuruan",
-      name: "SMK Cendekia Teknologi",
-      note: "Jurusan Rekayasa Perangkat Lunak (RPL), kelas 11 — fokus pada pengembangan web dan basis data.",
+      name: "SMK PGRI 2 PONOROGO",
+      note: "Jurusan Rekayasa Perangkat Lunak (RPL), kelas 11 — fokus pada Frontend dan Pentester.",
     },
   ],
 
@@ -133,8 +133,8 @@ const portfolioData = {
     { name: "HTML",       level: 90 },
     { name: "CSS",        level: 85 },
     { name: "JavaScript", level: 70 },
-    { name: "PHP",        level: 55 },
-    { name: "MySQL",      level: 60 },
+    { name: "PHP",        level: 70 },
+    { name: "MySQL",      level: 80 },
     { name: "Java",       level: 40 },
   ],
 
@@ -157,40 +157,40 @@ const portfolioData = {
   // ------------------------------------------------------------------
   projects: [
     {
-      title: "Sistem Absensi Sekolah",
-      year: "2025",
-      description: "Aplikasi web untuk mencatat kehadiran siswa secara digital lengkap dengan rekap laporan bulanan untuk wali kelas.",
-      tags: ["PHP", "MySQL", "Bootstrap"],
-      link: "#",
+      title: "Website Kelas XI RPL",
+      year: "2026",
+      description: "Website profil kelas XI RPL SMK PGRI 2 Ponorogo, menampilkan informasi siswa, guru, dan kegiatan kelas.",
+      tags: ["HTML", "CSS", "JS"],
+      link: "https://11rplsterida.vercel.app/",
     },
     {
-      title: "Landing Page UMKM Kopi",
-      year: "2025",
-      description: "Website profil untuk usaha kopi lokal, dibuat responsif dengan fokus pada kecepatan akses dan tampilan menarik.",
+      title: "Website Portfolio Pribadi",
+      year: "2026",
+      description: "Website portfolio pribadi yang menampilkan riwayat pendidikan, skills, dan proyek yang telah dikerjakan.",
       tags: ["HTML", "CSS", "JavaScript"],
-      link: "#",
+      link: "https://tentangsayaaaa.vercel.app/",
     },
-    {
-      title: "Aplikasi To-Do List",
-      year: "2024",
-      description: "Aplikasi pencatat tugas harian dengan fitur tandai selesai, kategori, dan penyimpanan data di browser.",
-      tags: ["JavaScript", "LocalStorage"],
-      link: "#",
-    },
-    {
-      title: "Company Profile Sekolah",
-      year: "2024",
-      description: "Redesign halaman profil sekolah dengan navigasi lebih sederhana dan tampilan yang mobile-friendly.",
-      tags: ["HTML", "CSS"],
-      link: "#",
-    },
-    {
-      title: "Sistem Inventaris Lab Komputer",
-      year: "2024",
-      description: "Proyek kelompok untuk mendata dan memantau kondisi perangkat di laboratorium komputer sekolah.",
-      tags: ["PHP", "MySQL"],
-      link: "#",
-    },
+  //   {
+  //     title: "Aplikasi To-Do List",
+  //     year: "2024",
+  //     description: "Aplikasi pencatat tugas harian dengan fitur tandai selesai, kategori, dan penyimpanan data di browser.",
+  //     tags: ["JavaScript", "LocalStorage"],
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Company Profile Sekolah",
+  //     year: "2024",
+  //     description: "Redesign halaman profil sekolah dengan navigasi lebih sederhana dan tampilan yang mobile-friendly.",
+  //     tags: ["HTML", "CSS"],
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Sistem Inventaris Lab Komputer",
+  //     year: "2024",
+  //     description: "Proyek kelompok untuk mendata dan memantau kondisi perangkat di laboratorium komputer sekolah.",
+  //     tags: ["PHP", "MySQL"],
+  //     link: "#",
+  //   },
   ],
 
   // ------------------------------------------------------------------
@@ -198,43 +198,43 @@ const portfolioData = {
   // ------------------------------------------------------------------
   certificates: [
     {
-      title: "Juara 2 Lomba Web Design Tingkat Kota",
-      issuer: "Dinas Pendidikan Kota",
+      title: "Kunjungan Industri Gamelab Indonesia",
+      issuer: "Gamelab Indonesia",
       date: "2025",
-      link: "#",
+      link: "assets/sertificate/gamelab.webp",
     },
     {
-      title: "Sertifikat Pelatihan Dasar Pemrograman Web",
-      issuer: "Platform Belajar Online",
-      date: "2024",
-      link: "#",
+      title: "Partisipasi GLOW#321",
+      issuer: "gameLAB Indonesia",
+      date: "2025",
+      link: "assets/sertificate/gamelab2.webp",
     },
     {
-      title: "Peserta Terbaik Lomba Kompetensi Siswa (LKS) — Web Technology",
-      issuer: "Sekolah / Panitia LKS",
-      date: "2024",
-      link: "#",
+      title: "Partisipasi Dicoding METC",
+      issuer: "Dicoding Indonesia",
+      date: "2025",
+      link: "assets/sertificate/dicoding.webp",
     },
-    {
-      title: "Sertifikat Magang Kerja Industri (PKL)",
-      issuer: "Perusahaan Mitra Sekolah",
-      date: "2024",
-      link: "#",
-    },
+    // {
+    //   title: "Sertifikat Magang Kerja Industri (PKL)",
+    //   issuer: "Perusahaan Mitra Sekolah",
+    //   date: "2024",
+    //   link: "#",
+    // },
   ],
 
   // ------------------------------------------------------------------
   // KONTAK
   // ------------------------------------------------------------------
   contact: {
-    email: "bima.pradana@email.com",
-    phone: "0812-xxxx-xxxx",
-    address: "Malang, Jawa Timur, Indonesia",
+    email: "cadanganacoout@gmail.com",
+    phone: "0889-9153-1800 (MESSAGE ONLY)",
+    address: "Ponorogo, Jawa Timur, Indonesia",
     socials: [
-      { platform: "github",    label: "GitHub",    url: "#" },
-      { platform: "linkedin",  label: "LinkedIn",  url: "#" },
-      { platform: "instagram", label: "Instagram", url: "#" },
-      { platform: "whatsapp",  label: "WhatsApp",  url: "#" },
+      { platform: "github",    label: "GitHub",    url: "https://github.com/cadanganacoout-lab" },
+      { platform: "linkedin",  label: "LinkedIn",  url: "https://www.linkedin.com/in/gilang-nur-naulida-faid-080233400/" },
+      { platform: "instagram", label: "Instagram", url: "https://www.instagram.com/gilanzq_/" },
+      { platform: "whatsapp",  label: "WhatsApp",  url: "0889-9153-1800" },
     ],
   },
 };
