@@ -1,198 +1,142 @@
-<!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<!doctype html>
+<html lang="id">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Portofolio Siswa RPL</title>
-<meta name="description" content="Portofolio siswa SMK jurusan Rekayasa Perangkat Lunak (RPL)." />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230A0E17'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='%234CE0D2' font-family='monospace'%3E%3C/%3E%3C/text%3E%3C/svg%3E" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-
-<link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050913">
+  <meta name="description" content="Portofolio 3D interaktif Gilang Nur Maulida Faid.">
+  <title>Portfolio Interface</title>
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23050913'/%3E%3Ctext x='50' y='67' font-size='48' text-anchor='middle' fill='%235ff9e5' font-family='monospace'%3EGF%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-<!-- ===================== BACKGROUND SCENE (gunung siang/malam) ===================== -->
-<div class="scene" aria-hidden="true">
-  <svg class="scene-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
-        <stop class="stop-sky-1" offset="0%" />
-        <stop class="stop-sky-2" offset="55%" />
-        <stop class="stop-sky-3" offset="100%" />
-      </linearGradient>
-      <linearGradient id="mtnBack" x1="0" y1="0" x2="0" y2="1">
-        <stop class="stop-mtn-back-1" offset="0%" />
-        <stop class="stop-mtn-back-2" offset="100%" />
-      </linearGradient>
-      <linearGradient id="mtnMid" x1="0" y1="0" x2="0" y2="1">
-        <stop class="stop-mtn-mid-1" offset="0%" />
-        <stop class="stop-mtn-mid-2" offset="100%" />
-      </linearGradient>
-      <linearGradient id="mtnFront" x1="0" y1="0" x2="0" y2="1">
-        <stop class="stop-mtn-front-1" offset="0%" />
-        <stop class="stop-mtn-front-2" offset="100%" />
-      </linearGradient>
-      <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-        <stop class="stop-sun-glow-1" offset="0%" />
-        <stop class="stop-sun-glow-2" offset="100%" />
-      </radialGradient>
-      <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-        <stop class="stop-moon-glow-1" offset="0%" />
-        <stop class="stop-moon-glow-2" offset="100%" />
-      </radialGradient>
-    </defs>
-
-    <rect class="sky" x="0" y="0" width="1440" height="900" fill="url(#skyGradient)" />
-
-    <!-- bintang -->
-    <g class="stars" id="starsGroup"></g>
-
-    <!-- awan (siang) -->
-    <g class="clouds">
-      <ellipse class="cloud" cx="220" cy="150" rx="90" ry="26" />
-      <ellipse class="cloud" cx="290" cy="135" rx="60" ry="20" />
-      <ellipse class="cloud" cx="1150" cy="110" rx="100" ry="28" />
-      <ellipse class="cloud" cx="1230" cy="130" rx="65" ry="20" />
-    </g>
-
-    <!-- matahari -->
-    <circle class="celestial-glow sun-glow" cx="1180" cy="150" r="140" fill="url(#sunGlow)" />
-    <circle class="celestial sun" cx="1180" cy="150" r="52" />
-
-    <!-- bulan -->
-    <circle class="celestial-glow moon-glow" cx="260" cy="130" r="110" fill="url(#moonGlow)" />
-    <circle class="celestial moon" cx="260" cy="130" r="44" />
-    <circle class="moon-crater" cx="245" cy="115" r="7" />
-    <circle class="moon-crater" cx="272" cy="140" r="10" />
-    <circle class="moon-crater" cx="255" cy="148" r="5" />
-
-    <!-- pegunungan -->
-    <path class="mountain mountain-back" d="M0,620 L140,470 L260,560 L380,430 L520,600 L650,480 L780,600 L900,440 L1050,580 L1180,460 L1320,590 L1440,500 L1440,900 L0,900 Z" fill="url(#mtnBack)" />
-    <path class="mountain mountain-mid" d="M0,700 L180,560 L340,660 L470,520 L600,680 L760,540 L900,660 L1040,560 L1200,670 L1320,580 L1440,660 L1440,900 L0,900 Z" fill="url(#mtnMid)" />
-    <path class="mountain mountain-front" d="M0,780 L120,680 L260,760 L400,650 L560,780 L700,660 L860,780 L1000,670 L1160,770 L1300,690 L1440,760 L1440,900 L0,900 Z" fill="url(#mtnFront)" />
-
-    <!-- lampu basecamp (malam) -->
-    <g class="camp-lights" id="campLights"></g>
-  </svg>
-  <div class="scene-fade"></div>
-</div>
-
-<!-- ===================== MOBILE TOP BAR ===================== -->
-<header class="mobile-bar">
-  <button class="hamburger" id="hamburgerBtn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="sidebar">
-    <span></span><span></span><span></span>
-  </button>
-  <div class="mobile-logo">&lt;<span id="mobileLogoName">portofolio</span>&nbsp;/&gt;</div>
-  <button class="theme-toggle theme-toggle--mobile" id="themeToggleMobile" aria-label="Ganti tema terang/gelap">
-    <span class="toggle-icon" id="mobileToggleIcon">☾</span>
-  </button>
-</header>
-
-<div class="nav-overlay" id="navOverlay"></div>
-
-<!-- ===================== SIDEBAR / DRAWER ===================== -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-top">
-    <div class="avatar-mini" id="avatarMini">--</div>
-    <div class="sidebar-id">
-      <p class="sidebar-name" id="sidebarName">Nama</p>
-      <p class="sidebar-role" id="sidebarRole">Peran</p>
+  <div class="app" id="app">
+    <div class="space-backdrop" aria-hidden="true">
+      <div class="nebula nebula--one"></div>
+      <div class="nebula nebula--two"></div>
+      <div class="space-events" id="spaceEvents"></div>
+      <div class="scanlines"></div>
     </div>
-    <button class="drawer-close" id="drawerClose" aria-label="Tutup menu">✕</button>
+
+    <header class="topbar">
+      <a class="brand" href="#profile" data-section="profile" aria-label="Kembali ke profil">
+        <span class="brand-mark">GF</span>
+        <span class="brand-copy"><strong id="brandName">PORTFOLIO</strong><small>NEURAL / INTERFACE</small></span>
+      </a>
+      <div class="topbar-meta">
+        <span class="signal"><i></i><span id="connectionText">LINK STABLE</span></span>
+        <span class="clock" id="clock">00:00:00</span>
+      </div>
+      <button class="menu-trigger" id="menuTrigger" type="button" aria-expanded="false" aria-controls="mobileNav">
+        <span>MENU</span><i aria-hidden="true"><b></b><b></b><b></b></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="welcome-screen" id="welcome" aria-labelledby="welcomeTitle">
+        <div class="welcome-grid" aria-hidden="true"></div>
+        <div class="welcome-content">
+          <p class="kicker"><span class="kicker-line"></span>INITIALIZING DIGITAL SPACE</p>
+          <h1 id="welcomeTitle">Welcome to<br><em>Gilang's Interface.</em></h1>
+          <p class="welcome-copy">A living portfolio built from code, curiosity, and the will to keep building.</p>
+          <a class="welcome-enter" href="#core">ENTER THE CORE <span>↓</span></a>
+        </div>
+        <div class="welcome-meta"><span>SYS.ID / GF-01</span><span>SCROLL TO INITIALIZE</span></div>
+      </section>
+
+      <section class="experience" id="core" aria-label="Interactive 3D portfolio">
+        <section class="intro" aria-labelledby="heroTitle">
+          <p class="kicker"><span class="kicker-line"></span>PERSONAL DIGITAL SPACE</p>
+          <h1 id="heroTitle">Build ideas.<br><em>Break limits.</em></h1>
+          <p class="intro-copy" id="heroCopy">Interactive portfolio of a software student exploring frontend craft and
+            cybersecurity.</p>
+          <div class="intro-actions">
+            <button class="primary-action" type="button" data-section="projects">EXPLORE WORK <span>↗</span></button>
+            <button class="quiet-action" type="button" data-section="contact">OPEN CHANNEL</button>
+          </div>
+        </section>
+
+        <section class="orbital-stage" aria-label="Interactive 3D portfolio scene">
+          <div class="stage-label stage-label--top"><span class="crosshair"></span>CORE / 01</div>
+          <div class="stage-label stage-label--bottom">DRAG TO ROTATE <span class="line"></span></div>
+          <div class="ai-status" aria-live="polite">
+            <span class="status-pulse"></span>
+            <span class="status-label">AI STATUS</span>
+            <strong id="aiStatus">READY</strong>
+          </div>
+          <div class="core-message" id="coreMessage" role="status" aria-live="polite"></div>
+          <div class="canvas-wrap" id="canvasWrap">
+            <canvas id="sceneCanvas" aria-label="Rotating holographic code sphere and futuristic computer"></canvas>
+            <div class="canvas-vignette" aria-hidden="true"></div>
+          </div>
+          <div class="orbit-nav" id="orbitNav" aria-label="Portfolio sections">
+            <span class="orbit-nav-title">SELECT MODULE</span>
+            <span class="orbit-nav-subtitle">CLICK TO CONNECT</span>
+          </div>
+        </section>
+
+        <aside class="side-readout" aria-label="System readout">
+          <div class="readout-heading"><span>LIVE READOUT</span><i></i></div>
+          <dl>
+            <div>
+              <dt>MODE</dt>
+              <dd id="readoutMode">CREATIVE</dd>
+            </div>
+            <div>
+              <dt>STACK</dt>
+              <dd>WEB / 3D / UI</dd>
+            </div>
+            <div>
+              <dt>LOCATION</dt>
+              <dd id="readoutLocation">PONOROGO, ID</dd>
+            </div>
+          </dl>
+          <div class="readout-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </aside>
+      </section>
+    </main>
+
+    <div class="mobile-nav" id="mobileNav" aria-label="Portfolio sections">
+      <div class="mobile-nav-head"><span>SELECT MODULE</span><button type="button" id="mobileNavClose"
+          aria-label="Tutup menu">×</button></div>
+      <div class="mobile-nav-grid" id="mobileNavGrid"></div>
+    </div>
+
+    <section class="content-panel" id="contentPanel" aria-labelledby="panelTitle" aria-hidden="true">
+      <div class="panel-backdrop" data-close-panel="true"></div>
+      <div class="panel-card">
+        <div class="panel-topline"><span id="panelIndex">01 / 06</span><button type="button" id="panelClose"
+            aria-label="Tutup panel">×</button></div>
+        <div class="panel-heading">
+          <p class="kicker"><span class="kicker-line"></span><span id="panelKicker">PROFILE MODULE</span></p>
+          <h2 id="panelTitle">Profile</h2>
+        </div>
+        <div class="panel-content" id="panelContent"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span id="footerText">© 2026 — DIGITAL PORTFOLIO</span>
+      <span class="footer-code">SYS.ID <b>///</b> 0xGF</span>
+    </footer>
   </div>
 
-  <nav class="sidebar-nav" id="sidebarNav" aria-label="Navigasi bagian"></nav>
+  <noscript>
+    <div class="no-script">JavaScript diperlukan untuk menjalankan interface portfolio 3D ini. Silakan aktifkan
+      JavaScript di browser Anda.</div>
+  </noscript>
 
-  <div class="sidebar-bottom">
-    <button class="theme-toggle theme-toggle--desktop" id="themeToggleDesktop" aria-pressed="false" aria-label="Ganti tema terang/gelap">
-      <span class="toggle-track">
-        <span class="toggle-thumb" id="toggleThumb">☾</span>
-      </span>
-      <span class="toggle-label" id="toggleLabel">Mode malam</span>
-    </button>
-    <p class="sidebar-status" id="sidebarStatus">● status</p>
-  </div>
-</aside>
-
-<!-- ===================== KONTEN UTAMA ===================== -->
-<main class="main-content" id="mainContent">
-
-  <section id="home" class="section hero">
-    <div class="terminal-window reveal">
-      <div class="terminal-titlebar">
-        <span class="dot dot-red"></span>
-        <span class="dot dot-yellow"></span>
-        <span class="dot dot-green"></span>
-        <span class="terminal-filename" id="terminalFilename">profile.js</span>
-      </div>
-      <pre class="terminal-body"><code id="typingCode"></code></pre>
-    </div>
-
-    <div class="hero-side reveal">
-      <div class="avatar-frame">
-        <div class="avatar-big" id="avatarBig">--</div>
-        <span class="status-dot" aria-hidden="true"></span>
-      </div>
-      <p class="hero-status" id="heroStatus">status</p>
-      <div class="hero-tags" id="heroTags"></div>
-      <div class="hero-socials" id="heroSocials"></div>
-    </div>
-
-    <a class="scroll-cue" href="#about" aria-label="Gulir ke bawah">
-      <span>scroll</span>
-      <span class="scroll-arrow">▾</span>
-    </a>
-  </section>
-
-  <section id="about" class="section">
-    <p class="eyebrow reveal">about.md</p>
-    <h2 class="section-title reveal">Tentang Saya</h2>
-    <div class="about-grid" id="aboutContent"></div>
-  </section>
-
-  <section id="education" class="section">
-    <p class="eyebrow reveal">education.json</p>
-    <h2 class="section-title reveal">Riwayat Pendidikan</h2>
-    <div class="timeline" id="educationTimeline"></div>
-  </section>
-
-  <section id="skills" class="section">
-    <p class="eyebrow reveal">skills.js</p>
-    <h2 class="section-title reveal">Bahasa &amp; Tools</h2>
-    <div class="skills-grid" id="skillsBars"></div>
-    <div class="tools-row" id="toolsRow"></div>
-  </section>
-
-  <section id="projects" class="section">
-    <p class="eyebrow reveal">projects/</p>
-    <h2 class="section-title reveal">Proyek</h2>
-    <div class="projects-grid" id="projectsGrid"></div>
-  </section>
-
-  <section id="certificates" class="section">
-    <p class="eyebrow reveal">certificates/</p>
-    <h2 class="section-title reveal">Penghargaan &amp; Sertifikat</h2>
-    <div class="certificates-grid" id="certificatesGrid"></div>
-  </section>
-
-  <section id="contact" class="section">
-    <p class="eyebrow reveal">contact.js</p>
-    <h2 class="section-title reveal">Kontak</h2>
-    <div class="contact-grid" id="contactContent"></div>
-  </section>
-
-  <footer class="site-footer">
-    <p id="footerText">footer</p>
-  </footer>
-</main>
-
-<button class="to-top" id="toTopBtn" aria-label="Kembali ke atas">↑</button>
-
-<script src="js/data.js"></script>
-<script src="js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
