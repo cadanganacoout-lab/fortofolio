@@ -21,7 +21,8 @@ const portfolioData = {
     school: "SMK PGRI 2 PONOROGO",
     location: "Ponorogo, Jawa Timur",
     status: "Terbuka untuk PKL / magang",
-    introduction: "Halo, saya Gilang, siswa RPL yang senang mengubah ide dan barisan kode menjadi pengalaman digital yang hidup.",
+    introduction:
+      "Halo, saya Gilang, siswa RPL yang senang mengubah ide dan barisan kode menjadi pengalaman digital yang hidup.",
 
     typingLines: [
       "const gilang = {",
@@ -149,7 +150,7 @@ const portfolioData = {
       description:
         "Aplikasi Yang Saya Buat Untuk Kelas XI RPL SMK PGRI 2 Ponorogo, Karena Akan Berpisah Untuk Kenang-Kenangan Disaat PKL.",
       tags: ["DART", "Flutter"],
-      link: "",
+      link: "https://download-landing-page.vercel.app/",
     },
   ],
 
